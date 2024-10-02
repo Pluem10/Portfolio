@@ -23,7 +23,7 @@ function App() {
     };
   });
   return (
-    <>
+    <div>
       <div className="App">
         <Header />
         <main className="wrapper">
@@ -34,7 +34,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
