@@ -1,4 +1,5 @@
 import React from "react";
+import PP from "../assets/download/PP.pdf";
 
 const Header = () => {
   const menufunction = () => {
@@ -9,6 +10,7 @@ const Header = () => {
       menuBtn.className = "nav-menu";
     }
   };
+
   return (
     <nav id="header">
       <div className="nav-logo">
@@ -23,26 +25,28 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#home" className="nav-link ">
+            <a href="#about" className="nav-link">
               About
             </a>
           </li>
           <li>
-            <a href="#home" className="nav-link ">
+            <a href="#project" className="nav-link">
               Project
             </a>
           </li>
           <li>
-            <a href="#home" className="nav-link ">
+            <a href="#contact" className="nav-link">
               Contact
             </a>
           </li>
         </ul>
       </div>
       <div className="nav-button">
-        <button className="btn">
-          Download CV <i className="uil uil-download-alt"></i>
-        </button>
+        <a href={PP} target="_blank" rel="noopener noreferrer">
+          <button className="btn">
+            Download CV <i className="uil uil-download-alt"></i>
+          </button>
+        </a>
       </div>
       <div className="nav-menu-btn">
         <i className="uil uil-bars" onClick={menufunction}></i>
