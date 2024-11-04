@@ -1,5 +1,5 @@
 import React from "react";
-import PP from "../assets/download/PP.pdf";
+import Nitiphonsombat from "../assets/download/Nitiphonsombat.pdf";
 
 const Header = () => {
   const menufunction = () => {
@@ -18,33 +18,33 @@ const Header = () => {
         <span>.</span>
       </div>
       <div className="nav-menu" id="myNavMenu">
-        <ul className="nav_menu_list nav_list">
-          <li>
+        <ul className="nav_menu_list">
+        <li className="nav_list">
             <a href="#home" className="nav-link active-link">
               Home
             </a>
           </li>
-          <li>
+          <li className="nav_list">
             <a href="#about" className="nav-link">
               About
             </a>
           </li>
-          <li>
-            <a href="#project" className="nav-link">
-              Project
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="nav-link">
-              Contact
-            </a>
-          </li>
+          <li className="nav_list">
+          <a href="#projects" className="nav-link">
+            Projects
+          </a>
+        </li>
+        <li className="nav_list">
+          <a href="#contact" className="nav-link">
+            Contact
+          </a>
+        </li>
         </ul>
       </div>
       <div className="nav-button">
-        <a href={PP} target="_blank" rel="noopener noreferrer">
+        <a href={Nitiphonsombat} target="_blank">
           <button className="btn">
-            Download CV <i className="uil uil-download-alt"></i>
+            Download CV <i className="uil uil-import"></i>
           </button>
         </a>
       </div>

@@ -14,8 +14,7 @@ const ContactBox = () => {
               Find Me <i className="uil uil-conner-right-dow"></i>
             </h2>
             <p>
-              <i className="uil uil-envelope"></i>Email:
-              664259010@webmail.npeu.ac.th
+              <i className="uil uil-envelope"></i>Email: 664259010@webmail.npeu.ac.th
             </p>
             <p>
               <i className="uil uil-envelope"></i>Phone: Tel:+66 82 234 5774

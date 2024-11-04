@@ -1,5 +1,5 @@
 import React from "react";
-import PP from "../assets/download/PP.pdf";
+import Nitiphonsombat from "../assets/download/Nitiphonsombat.pdf";
 
 const AboutBox = () => {
   return (
@@ -17,24 +17,53 @@ const AboutBox = () => {
               front-end technologies like React and Vue.js, I enjoy turning
               complex problems into simple, elegant solutions.
             </p>
+            <div className="about-btn">
+              <div className="nav-button">
+                <a href={Nitiphonsombat} target="_blank">
+                  <button className="btn">
+                    Download CV <i className="uil uil-import"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Skill */}
         <div className="col">
-          <div className="skills-box">
+        <div className="skills-box">
             <div className="skills-header">
               <h3>Frontend</h3>
             </div>
             <div className="skills-list">
               <span>HTML</span>
-              <span>HTML</span>
-              <span>HTML</span>
+              <span>CSS</span>
+              <span>Javascript</span>
+              <span>Bootstrap</span>
+              <span>Tailwind</span>
+              <span>React</span>
+              <span>Figma</span>
             </div>
           </div>
-          <h3>MySQL</h3>
-          <div className="skills-list"></div>
-          <div className="skills-box"></div>
+          <div className="skills-box">
+            <div className="skills-header">
+              <h3>BackEnd</h3>
+            </div>
+            <div className="skills-list">
+              <span>PHP</span>
+              <span>Javascript</span>
+            </div>
+          </div>
+          <div className="skills-box">
+            <div className="skills-header">
+              <h3>Database</h3>
+            </div>
+            <div className="skills-list">
+              <span>MYSQL</span>
+              <span>PostgreSQL</span>
+              <span>MongoSQL</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

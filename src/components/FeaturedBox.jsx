@@ -32,12 +32,12 @@ function FeaturedBox() {
             </a>
           </div>
           <div className="icon">
-            <a href="https://www.facebook.com/wisarut">
+            <a href="https://www.facebook.com/pluem.nitiphon/">
               <i className="uil uil-facebook"></i>
             </a>
           </div>
           <div className="icon">
-            <a href="https://www.github.com/JeyZ9">
+            <a href="https://github.com/Pluem10">
               <i className="uil uil-github-alt"></i>
             </a>
           </div>

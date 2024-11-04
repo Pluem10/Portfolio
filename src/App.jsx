@@ -6,19 +6,21 @@ import ProjectsBox from "./components/ProjectsBox";
 import ContactBox from "./components/ContactBox";
 import Footer from "./components/Footer";
 import React, { useEffect } from "react";
-import Typed from "typed.js";
 import ScrollReveal from "scrollreveal";
+import Typed from "typed.js";
+
 
 function App() {
   useEffect(() => {
     /** Change active link */
     const sections = document.querySelectorAll("section[id]");
-    const scrollActive = () => {
+    function scrollActive() {
       const scrollY = window.scrollY;
       sections.forEach((current) => {
         const sectionHeight = current.offsetHeight,
-          sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute("id");
+          sectionTop = current.offsetTop - 50,
+          sectionId = current.getAttribute("id");
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           document
             .querySelector(".nav-menu a[href*=" + sectionId + "]")
@@ -29,9 +31,8 @@ function App() {
             .classList.remove("active-link");
         }
       });
-    };
-
-    /** scroll reveal */
+    }
+    window.addEventListener("scroll", scrollActive);
     const sr = ScrollReveal({
       origin: "top",
       distance: "80px",
@@ -39,13 +40,43 @@ function App() {
       reset: true,
     });
 
-    // HOME
-    sr.reveal(".feature-text-card", {});
-    sr.reveal(".feature-name", {});
+    // Feature Box
+    sr.reveal(".featured-text-card", {});
+    sr.reveal(".featured-name", { delay: 100 });
+    sr.reveal(".featured-text-info", { delay: 200 });
+    sr.reveal(".featured-text-btn", { delay: 200 });
+    sr.reveal(".social_icons", { delay: 200 });
+    sr.reveal(".featured-image", { delay: 200 });
 
-    window.addEventListener("scroll", scrollActive);
+    // ProjectBox
+    sr.reveal(".project-box", { interval: 200 });
 
-    // type Effect
+    // Heading
+    sr.reveal(".top-header", {});
+
+    // Left Animation
+    const srLeft = ScrollReveal({
+      origin: "left",
+      distance: "80px",
+      duration: 2000,
+      reset: true,
+    });
+
+    srLeft.reveal(".about-info", { delay: 200 });
+    srLeft.reveal(".contact-info", { delay: 200 });
+
+    // Right Animation
+    const srRight = ScrollReveal({
+      origin: "right",
+      distance: "80px",
+      duration: 2000,
+      reset: true,
+    });
+
+    srRight.reveal(".skills-box", { delay: 100 });
+    srRight.reveal(".form-control", { delay: 100 });
+
+    // Type Effect
     const typingEffect = new Typed(".typedText", {
       strings: ["Lecturer", "Developer", "Researcher"],
       loop: true,
@@ -56,6 +87,7 @@ function App() {
 
     return () => {
       typingEffect.destroy();
+      window.removeEventListener("scroll", scrollActive);
     };
   }, []);
 
